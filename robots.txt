@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://connabyss.github.io/sitemap.xml
