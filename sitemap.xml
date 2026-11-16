@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://connabyss.github.io/</loc></url>
+  <url><loc>https://connabyss.github.io/past-forever/</loc></url>
+  <url><loc>https://connabyss.github.io/trawl/</loc></url>
   <url><loc>https://connabyss.github.io/cold-case/</loc></url>
   <url><loc>https://connabyss.github.io/excuse-court/</loc></url>
   <url><loc>https://connabyss.github.io/trust-issues/</loc></url>
+  <url><loc>https://connabyss.github.io/dont-close-this-tab/</loc></url>
+  <url><loc>https://connabyss.github.io/dont-open-the-fridge/</loc></url>
+  <url><loc>https://connabyss.github.io/browser-has-thoughts/</loc></url>
 </urlset>
