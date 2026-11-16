@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CH: strange games and odd tools</title>
+<meta name="description" content="Strange games and a few odd tools by CH (connabyss). Everything here runs in your browser, free.">
+<link rel="canonical" href="https://connabyss.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://connabyss.github.io/">
+<meta property="og:title" content="CH: strange games and odd tools">
+<meta property="og:description" content="Strange games and a few odd tools. Everything here runs in your browser, free.">
+<meta property="og:image" content="https://connabyss.github.io/img/past-forever.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0c0b10">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230c0b10'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='15' font-weight='700' fill='%23f2b01e' text-anchor='middle'%3ECH%3C/text%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#0c0b10; --panel:#141319; --line:#26242d; --ink:#ece8dc; --dim:#a8a4b0; --faint:#7d7986; --gold:#f2b01e;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 var(--sans)}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header{padding:28px 0 8px}
+header picture img{display:block;width:100%;height:auto;border-radius:10px}
+.intro{max-width:640px;margin:22px 0 0;font-size:18px;color:var(--dim)}
+.intro b{color:var(--ink);font-weight:600}
+h2{font:600 13px/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin:56px 0 18px;display:flex;align-items:center;gap:14px}
+h2::after{content:"";flex:1;height:1px;background:var(--line)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:18px}
+.card{display:flex;flex-direction:column;background:var(--panel);border:1px solid var(--line);border-radius:10px;overflow:hidden;text-decoration:none;transition:border-color .15s,transform .15s}
+.card:hover,.card:focus-visible{border-color:#4a4654;transform:translateY(-2px)}
+.card:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.card img{display:block;width:100%;aspect-ratio:8/5;height:auto;object-fit:cover;background:#1b1a21;border-bottom:1px solid var(--line)}
+.card .body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:6px;flex:1}
+.card h3{margin:0;font-size:17px;font-weight:650;letter-spacing:.01em}
+.card p{margin:0;color:var(--dim);font-size:14.5px;line-height:1.5}
+.tag{margin-top:auto;padding-top:8px;font:12px/1 var(--mono);color:var(--faint)}
+.tag em{font-style:normal;color:var(--gold)}
+.feature{display:grid;grid-template-columns:1.25fr 1fr;align-items:stretch}
+.feature img{aspect-ratio:auto;height:100%;border-bottom:0;border-right:1px solid var(--line)}
+.feature .body{padding:26px 28px;gap:10px;justify-content:center}
+.feature h3{font-size:26px}
+.feature p{font-size:15.5px}
+.cta{align-self:flex-start;margin-top:8px;background:var(--gold);color:#17130a;font-weight:650;font-size:15px;padding:10px 16px;border-radius:7px}
+.grid.small{grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}
+code{font:13px/1.4 var(--mono);color:var(--ink);background:#1d1c23;border:1px solid var(--line);border-radius:5px;padding:2px 6px}
+footer{margin:64px 0 0;padding:22px 0 40px;border-top:1px solid var(--line);color:var(--faint);font:13px/1.8 var(--mono);display:flex;flex-wrap:wrap;gap:6px 22px}
+footer a{color:var(--dim);text-decoration:none}
+footer a:hover{color:var(--ink)}
+@media (max-width:760px){
+  .feature{grid-template-columns:1fr}
+  .feature img{height:auto;aspect-ratio:8/5;border-right:0;border-bottom:1px solid var(--line)}
+  .feature .body{padding:18px 18px 20px}
+  .feature h3{font-size:22px}
+    .grid.small{grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}
+.duo{grid-template-columns:1fr}
+  .intro{font-size:16.5px}
+  h2{margin-top:44px}
+}
+@media (prefers-reduced-motion:reduce){.card{transition:none}.card:hover{transform:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <picture>
+    <source media="(max-width: 600px)" srcset="img/header-forever-phone.svg">
+    <img src="img/header-forever.svg" width="1200" height="350" alt="CH: strange games, and a language where forever ends. 0.142857… grows to the right while …142857143 grows to the left in gold: both are 1 ÷ 7, and the gold one is a whole number.">
+  </picture>
+  <p class="intro">I make <b>strange games</b> and a few <b>odd tools</b>. Everything on this page runs in your browser, free. Pick anything.</p>
+</header>
+
+<main>
+<h2>Start here</h2>
+<a class="card feature" href="https://connabyss.github.io/past-forever/">
+  <img src="img/past-forever.webp" width="640" height="400" alt="Past Forever: 1 ÷ 7 = …142857143, a whole number">
+  <div class="body">
+    <h3>Past Forever</h3>
+    <p>A tiny language where infinite loops finish with an answer. In its world, 1 ÷ 7 is a whole number, and times 7 it is exactly 1.</p>
+    <p>Your calculator rounds. Past Forever doesn't.</p>
+    <span class="cta">Take the Wonders tour</span>
+  </div>
+</a>
+
+<h2>Games</h2>
+<div class="grid">
+  <a class="card" href="https://connabyss.itch.io/the-shifting-house">
+    <img src="img/shifting-house.webp" width="640" height="400" loading="lazy" alt="The Shifting House: a doll's house cut open at night, its source code on a torn page beside it">
+    <div class="body"><h3>The Shifting House</h3><p>You wrote this house. Now it rewrites itself to keep you in.</p><span class="tag"><em>GitHub Game Off 2026</em> · itch.io</span></div>
+  </a>
+  <a class="card" href="https://claude.ai/artifact/9F1638bwzjDckfcpDHseXe">
+    <img src="img/unknown-process.webp" width="640" height="400" loading="lazy" alt="Unknown Process: desktop icons spell out the score">
+    <div class="body"><h3>Unknown Process</h3><p>You are the ghost in somebody's computer. Make their files creepy, then let them in.</p><span class="tag">game jam entry · browser</span></div>
+  </a>
+  <a class="card" href="https://connabyss.github.io/excuse-court/">
+    <img src="img/excuse-court.webp" width="640" height="400" loading="lazy" alt="Excuse Court: Judge June Burden at her bench, gavel raised">
+    <div class="body"><h3>Excuse Court</h3><p>Your excuse is on trial. The Honorable June Burden has heard worse. Not often.</p><span class="tag">new docket every day · browser</span></div>
+  </a>
+  <a class="card" href="https://connabyss.github.io/cold-case/">
+    <img src="img/cold-case.webp" width="640" height="400" loading="lazy" alt="Cold Case Unit: a case file stamped COLD next to police tape">
+    <div class="body"><h3>Cold Case Unit</h3><p>Type any GitHub username and get a case file on every project they walked away from.</p><span class="tag">browser</span></div>
+  </a>
+  <a class="card" href="https://above-your-pay-grade.connabyss.workers.dev/">
+    <img src="img/pay-grade.webp" width="640" height="400" loading="lazy" alt="Above Your Pay Grade: the HR bot PENNY and your employee badge">
+    <div class="body"><h3>Above Your Pay Grade</h3><p>Try to trick an HR bot into leaking the CEO's salary. It falls for everything. It still can't leak it.</p><span class="tag">browser</span></div>
+  </a>
+  <a class="card" href="https://unfinished-tutorial.connabyss.workers.dev/">
+    <img src="img/unfinished-tutorial.webp" width="640" height="400" loading="lazy" alt="The Unfinished Tutorial: a sign-in card over a pixel field full of slimes">
+    <div class="body"><h3>The Unfinished Tutorial</h3><p>A tiny real MMO. Everyone is stuck in the tutorial because the rest of the game never shipped.</p><span class="tag">multiplayer · browser</span></div>
+  </a>
+</div>
+
+<h2>Tools</h2>
+<div class="duo">
+  <a class="card" href="https://connabyss.github.io/trawl/">
+    <img src="img/trawl.webp" width="640" height="400" loading="lazy" alt="The Trawl playground: a number hunt with its catches listed">
+    <div class="body"><h3>Trawl</h3><p>A tiny language for hunting patterns in whole numbers. Change a number, press Run, watch what it catches.</p><span class="tag">playground · browser</span></div>
+  </a>
+  <a class="card" href="https://github.com/connabyss/bite">
+    <img src="img/bite.webp" width="640" height="400" loading="lazy" alt="Bite: a black cat with one fang, next to the word bite">
+    <div class="body"><h3>Bite</h3><p>AI coding agents love to say "fixed, and I added a test." Bite takes each fix back out and runs your tests. If they still pass, nothing was checking the fix.</p><p><code>pip install bite-check</code></p><span class="tag">free, no key · Python</span></div>
+  </a>
+</div>
+
+<h2>Small strange things</h2>
+<div class="grid small">
+  <a class="card" href="https://connabyss.github.io/trust-issues/">
+    <img src="img/trust-issues.webp" width="640" height="400" loading="lazy" alt="Trust Issues: a row of little robots under a night sky">
+    <div class="body"><h3>Trust Issues</h3><p>Robots build things overnight and keep each other honest. Watch the shifts.</p></div>
+  </a>
+  <a class="card" href="https://connabyss.github.io/dont-close-this-tab/">
+    <img src="img/dont-close-this-tab.webp" width="640" height="400" loading="lazy" alt="Don't Close This Tab: a worried little tab with eyes">
+    <div class="body"><h3>Don't Close This Tab</h3><p>A browser tab that knows you want to leave. It does not take it well.</p></div>
+  </a>
+  <a class="card" href="https://connabyss.github.io/dont-open-the-fridge/">
+    <img src="img/dont-open-the-fridge.webp" width="640" height="400" loading="lazy" alt="Don't Open the Fridge: 3:00 AM, the house is listening">
+    <div class="body"><h3>Don't Open the Fridge</h3><p>3 AM. The fridge hum has picked up a second note.</p></div>
+  </a>
+  <a class="card" href="https://connabyss.github.io/browser-has-thoughts/">
+    <img src="img/browser-has-thoughts.webp" width="640" height="400" loading="lazy" alt="Your Browser Has Thoughts: a single Listen button">
+    <div class="body"><h3>Your Browser Has Thoughts</h3><p>Nine inner voices. They only talk about true things your browser tells them.</p></div>
+  </a>
+</div>
+</main>
+
+<footer>
+  <span>CH · connabyss</span>
+  <a href="https://github.com/connabyss">GitHub</a>
+  <a href="https://connabyss.itch.io/">itch.io</a>
+  <a href="https://dev.to/connabyss">DEV</a>
+</footer>
+</div>
+</body>
+</html>
