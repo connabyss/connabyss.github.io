@@ -6,3 +6,8 @@ The home page at https://connabyss.github.io/ : one page that links to every gam
 - `404.html`: shown for any address that doesn't exist.
 - `sitemap.xml`: every live page. Add new GitHub Pages games here.
 - `googledacb01e4b1f47ade.html` and `BingSiteAuth.xml`: search engine ownership files. Never delete them.
+
+## Credits
+
+- `img/paper.webp`: Paper 001 from [ambientCG](https://ambientcg.com/view?id=Paper001), CC0 (warmed and tiled).
+- Fonts from Google Fonts (SIL Open Font License): Big Shoulders Display, Newsreader, Reenie Beanie, IBM Plex Mono.
